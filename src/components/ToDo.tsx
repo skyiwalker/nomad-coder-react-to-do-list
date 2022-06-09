@@ -1,5 +1,6 @@
 import React from "react";
-import { IToDo } from "../atoms";
+import { useSetRecoilState } from "recoil";
+import { IToDo, toDoState } from "../atoms";
 
 function ToDo({ text, category }: IToDo) {
   const setToDos = useSetRecoilState(toDoState);
