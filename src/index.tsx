@@ -6,12 +6,10 @@ import App from "./App";
 import { darkTheme } from "./theme";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <ThemeProvider theme={darkTheme}>
-        <App />
-      </ThemeProvider>
-    </RecoilRoot>
-  </React.StrictMode>,
+  <RecoilRoot>
+    <ThemeProvider theme={darkTheme}>
+      <App />
+    </ThemeProvider>
+  </RecoilRoot>,
   document.getElementById("root")
 );
