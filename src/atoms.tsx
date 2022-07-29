@@ -17,9 +17,28 @@ export const categoryState = atom<Categories>({
   default: Categories.TO_DO,
 });
 
+// export const toDoState = atom<IToDo[]>({
+//   key: "toDo",
+//   default: [],
+// });
+
 export const toDoState = atom<IToDo[]>({
   key: "toDo",
   default: [],
+  effects: [
+    ({ setSelf, onSet }) => {
+      const todoStoreKey = "Todo";
+      const savedValue = localStorage.getItem(todoStoreKey);
+      if (savedValue != null) {
+        setSelf(JSON.parse(savedValue));
+      }
+      onSet((newValue, _, isReset) => {
+        isReset
+          ? localStorage.removeItem(todoStoreKey)
+          : localStorage.setItem(todoStoreKey, JSON.stringify(newValue));
+      });
+    },
+  ],
 });
 
 export const toDoSelector = selector({
