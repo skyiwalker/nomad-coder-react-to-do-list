@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/nomad-coder-react-to-do-list/static/js/main.bd9a4f76.js",
+    "index.html": "/nomad-coder-react-to-do-list/index.html",
+    "main.bd9a4f76.js.map": "/nomad-coder-react-to-do-list/static/js/main.bd9a4f76.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bd9a4f76.js"
+  ]
+}
